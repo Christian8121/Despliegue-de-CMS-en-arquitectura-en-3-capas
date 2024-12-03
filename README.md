@@ -53,7 +53,7 @@ Se asignará a la instancia creada una red VPC previamente configurada. Al ser u
 Se configurarán los servidores web y el balanceador de carga. En el balanceador, se instalará Apache2 y, mediante una directiva proxy en un archivo .conf, se gestionará la distribución de carga entre los dos servidores web.
 
 ### Paso 1: Configuración del Balanceador de Carga
-Para optimizar el funcionamiento del balanceador, se ejecutarán dos comandos para actualizar la lista de repositorios y llevarlos a su versión más reciente.
+* Para optimizar el funcionamiento del balanceador, se ejecutarán dos comandos para actualizar la lista de repositorios y llevarlos a su versión más reciente. 
 ```
 sudo apt-get update
 ```
