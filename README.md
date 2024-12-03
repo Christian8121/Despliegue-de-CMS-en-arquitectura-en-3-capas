@@ -64,6 +64,31 @@ sudo apt-get upgrade -y
 ```
 ![image](https://github.com/user-attachments/assets/4d6624db-2d58-4b3a-aee2-0f82c31c04fa)
 
+*  Instalación y Configuración de APACHE2
+Instalamos Apache2 en el balanceador de carga para redirigir las solicitudes entre los servidores web, distribuyendo así la carga de manera eficiente.
+
+```
+sudo apt-get install apache2 -y
+```
+![image](https://github.com/user-attachments/assets/4b9f2bd1-8b79-4327-840f-ec157496857a)
+
+* Realizamos la comprobación
+
+```
+sudo systemctl start apache2
+```
+![image](https://github.com/user-attachments/assets/6efa6527-fc98-423d-bf9a-b41762148758)
+
+```
+sudo systemctl enable apache2
+```
+![image](https://github.com/user-attachments/assets/0bb49be9-7a2a-4f41-8270-285446b823d3)
+
+```
+sudo systemctl status apache2
+```
+![image](https://github.com/user-attachments/assets/4db86cba-9900-43e6-8335-b2d46b2c97c3)
+
 
 
 
