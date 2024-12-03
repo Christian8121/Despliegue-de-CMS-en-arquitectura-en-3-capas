@@ -13,7 +13,7 @@ Un servidor MariaDB/MySQL que gestiona la base de datos de WordPress.
 Acceso restringido únicamente desde los servidores backend.
 # Desarrolllo
 ## 1. Crear la VPC y Subredes
-## Crearemos una VPC con tres subredes:
+### Paso 1: Crearemos una VPC con tres subredes
 
 Una subred pública para el balanceador de carga (Capa 1), que será el único punto accesible desde internet.
 Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra para la base de datos MySQL (Capa 3), garantizando que estos recursos estén protegidos y solo accesibles internamente.
@@ -22,7 +22,7 @@ Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra par
 
 ![image](https://github.com/user-attachments/assets/a4398091-b22e-45a5-903b-1ffcbef76611)
 
-### Comprobamos que se ha creado la vpc y las subredes de esta de forma correcta
+### Paso 2: Comprobamos que se ha creado la vpc y las subredes de esta de forma correcta
 ![image](https://github.com/user-attachments/assets/520611e7-cceb-4779-8e80-38b77bd937e3)
 
 ## 2. Creacion de las instancias 
@@ -33,7 +33,7 @@ Asignar un nombre a la instancia y seleccionar la AMI Ubuntu Server 24.04 LTS. E
 
 ![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
 
-### Definir el tipo de Instancia y crear las Claves de SSH:
+### Paso 2: Definir el tipo de Instancia y crear las Claves de SSH:
 
 ![image](https://github.com/user-attachments/assets/58d0c5a1-45e6-49b1-994b-f59310e3820b)
 ![image](https://github.com/user-attachments/assets/4bbf5985-ddc1-4074-a211-5f5be6802148)
