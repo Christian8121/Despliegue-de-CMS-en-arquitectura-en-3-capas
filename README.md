@@ -55,6 +55,9 @@ Se configurarán los servidores web y el balanceador de carga. En el balanceador
 ### Paso 1: Configuración del Balanceador de Carga
 Para optimizar el funcionamiento del balanceador, se ejecutarán dos comandos para actualizar la lista de repositorios y llevarlos a su versión más reciente.
 
+![image](https://github.com/user-attachments/assets/5b4efa0f-d0ec-4f9c-b670-244e5231c0fd)
+
+
 
 
 
