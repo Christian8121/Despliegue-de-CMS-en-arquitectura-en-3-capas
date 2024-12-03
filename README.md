@@ -11,3 +11,4 @@ Un servidor NFS que contiene los recursos compartidos del CMS.
 ### Capa 3: Privada (Base de Datos)
 Un servidor MariaDB/MySQL que gestiona la base de datos de WordPress.
 Acceso restringido únicamente desde los servidores backend.
+# Desarrolllo
