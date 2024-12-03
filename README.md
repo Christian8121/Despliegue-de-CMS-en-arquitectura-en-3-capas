@@ -12,3 +12,8 @@ Un servidor NFS que contiene los recursos compartidos del CMS.
 Un servidor MariaDB/MySQL que gestiona la base de datos de WordPress.
 Acceso restringido únicamente desde los servidores backend.
 # Desarrolllo
+## 1. Crear la VPC y Subredes
+crearemos una VPC con tres subredes:
+
+Una subred pública para el balanceador de carga (Capa 1), que será el único punto accesible desde internet.
+Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra para la base de datos MySQL (Capa 3), garantizando que estos recursos estén protegidos y solo accesibles internamente.
