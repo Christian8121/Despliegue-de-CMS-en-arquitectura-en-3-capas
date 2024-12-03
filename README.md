@@ -43,6 +43,23 @@ Se asignará a la instancia creada una red VPC previamente configurada. Al ser u
 
 ![Captura de pantalla 2024-12-03 215323](https://github.com/user-attachments/assets/a1fde9de-c9a0-449c-bcfe-910f40480e39)
 
+### Paso 4: Creación de Grupo de Seguridad para la Instancia
+
+![image](https://github.com/user-attachments/assets/7394e885-7a66-4fd4-88a4-0cd7b3b629d2)
+![image](https://github.com/user-attachments/assets/4af3c169-aab2-4201-818b-49208d85c752)
+![image](https://github.com/user-attachments/assets/d0d48d1d-d86a-4e7a-bc57-2b88224d4710)
+
+## 3. Configuración Servidores Web y Balanceador
+Se configurarán los servidores web y el balanceador de carga. En el balanceador, se instalará Apache2 y, mediante una directiva proxy en un archivo .conf, se gestionará la distribución de carga entre los dos servidores web.
+
+### Paso 1: Configuración del Balanceador de Carga
+Para optimizar el funcionamiento del balanceador, se ejecutarán dos comandos para actualizar la lista de repositorios y llevarlos a su versión más reciente.
+
+
+
+
+
+
 
 
 
