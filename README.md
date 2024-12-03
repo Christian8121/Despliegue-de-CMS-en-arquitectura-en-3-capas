@@ -26,7 +26,10 @@ Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra par
 ![image](https://github.com/user-attachments/assets/520611e7-cceb-4779-8e80-38b77bd937e3)
 
 ## 2. Creacion de las instancias 
-Capa 1: Instancia en la subred pública como Balanceador de Carga, accesible desde internet.
+Se crearán instancias con una AMI de Ubuntu Server 24.04 para un despliegue en tres capas: un balanceador en la primera capa, servidores backend en la segunda y un servidor MySQL en la tercera.
+
+### Paso 1: Configuración de la instancia
+Asignar un nombre a la instancia y seleccionar la AMI Ubuntu Server 24.04 LTS. En entornos de prueba, se pueden usar ISOs o imágenes equivalentes.
 
 ![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
 
@@ -36,8 +39,6 @@ Capa 1: Instancia en la subred pública como Balanceador de Carga, accesible des
 ![image](https://github.com/user-attachments/assets/4bbf5985-ddc1-4074-a211-5f5be6802148)
 
 
-Capa 2: Dos instancias en subredes privadas para los servidores Backend y un servidor NFS para compartir recursos.
-Capa 3: Instancia en una subred privada para el servidor de Base de Datos, accesible solo desde los servidores Backend.
 
 
 
