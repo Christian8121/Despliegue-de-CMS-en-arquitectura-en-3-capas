@@ -33,10 +33,16 @@ Asignar un nombre a la instancia y seleccionar la AMI Ubuntu Server 24.04 LTS. E
 
 ![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
 
-### Paso 2: Definir el tipo de Instancia y crear las Claves de SSH:
+### Paso 2: Definir el tipo de Instancia y crear las Claves de SSH
 
 ![image](https://github.com/user-attachments/assets/58d0c5a1-45e6-49b1-994b-f59310e3820b)
 ![image](https://github.com/user-attachments/assets/4bbf5985-ddc1-4074-a211-5f5be6802148)
+
+### Paso 3: Configuración de Red
+Se asignará a la instancia creada una red VPC previamente configurada. Al ser un balanceador de carga, se asociará a una subred pública para permitir el acceso SSH desde el equipo local.
+
+![Captura de pantalla 2024-12-03 215323](https://github.com/user-attachments/assets/a1fde9de-c9a0-449c-bcfe-910f40480e39)
+
 
 
 
