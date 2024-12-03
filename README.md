@@ -89,6 +89,8 @@ sudo systemctl status apache2
 ```
 ![image](https://github.com/user-attachments/assets/4db86cba-9900-43e6-8335-b2d46b2c97c3)
 
+* Comprobamos si funciona el Apache2
+![image](https://github.com/user-attachments/assets/63d35076-98dc-48f9-b760-463f9e12c4e3)
 
 
 
