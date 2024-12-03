@@ -30,6 +30,12 @@ Capa 1: Instancia en la subred pública como Balanceador de Carga, accesible des
 
 ![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
 
+### Definir el tipo de Instancia y crear las Claves de SSH:
+
+![image](https://github.com/user-attachments/assets/58d0c5a1-45e6-49b1-994b-f59310e3820b)
+![image](https://github.com/user-attachments/assets/4bbf5985-ddc1-4074-a211-5f5be6802148)
+
+
 Capa 2: Dos instancias en subredes privadas para los servidores Backend y un servidor NFS para compartir recursos.
 Capa 3: Instancia en una subred privada para el servidor de Base de Datos, accesible solo desde los servidores Backend.
 
