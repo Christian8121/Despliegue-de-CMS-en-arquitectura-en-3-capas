@@ -22,4 +22,8 @@ Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra par
 
 ![image](https://github.com/user-attachments/assets/a4398091-b22e-45a5-903b-1ffcbef76611)
 
+## 2. Comprobamos que se ha creado la vpc y las subredes de esta de forma correcta
+![image](https://github.com/user-attachments/assets/520611e7-cceb-4779-8e80-38b77bd937e3)
+
+
 
