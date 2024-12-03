@@ -57,9 +57,13 @@ Para optimizar el funcionamiento del balanceador, se ejecutarán dos comandos pa
 ```
 sudo apt-get update
 ```
-
-
 ![image](https://github.com/user-attachments/assets/5b4efa0f-d0ec-4f9c-b670-244e5231c0fd)
+
+```
+sudo apt-get upgrade -y
+```
+![image](https://github.com/user-attachments/assets/4d6624db-2d58-4b3a-aee2-0f82c31c04fa)
+
 
 
 
