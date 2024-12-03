@@ -26,6 +26,12 @@ Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra par
 ![image](https://github.com/user-attachments/assets/520611e7-cceb-4779-8e80-38b77bd937e3)
 
 ## 2. Creacion de las instancias 
+Capa 1: Instancia en la subred pública como Balanceador de Carga, accesible desde internet.
+
+![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
+
+Capa 2: Dos instancias en subredes privadas para los servidores Backend y un servidor NFS para compartir recursos.
+Capa 3: Instancia en una subred privada para el servidor de Base de Datos, accesible solo desde los servidores Backend.
 
 
 
