@@ -122,10 +122,41 @@ sudo systemctl status apache2
 ```
 ![image](https://github.com/user-attachments/assets/b9f6c024-4d60-45b6-bf62-708a6efc2390)
 
+### Paso 2: Configuración de los servidores WEBs
+Los servidores con Apache y PHP despliegan WordPress utilizando recursos alojados en una carpeta compartida en el servidor NFS, recibiendo solicitudes gestionadas por el balanceador de carga.
 
+* actualizar la lista de repositorios y llevarlos a su versión más reciente.
 
+```
+sudo apt-get update
+```
+![image](https://github.com/user-attachments/assets/bea9e838-a9a6-4c77-a67c-50e3a2973a91)
 
+```
+sudo apt-get upgrade -y
+```
+![image](https://github.com/user-attachments/assets/c1886106-9949-41ba-b320-88db65976ca2)
 
+* Instalación de Apache y PHP (+ Librerías)
+```
+sudo apt-get install apache2 -y
+```
+![image](https://github.com/user-attachments/assets/dbe70fe5-831b-4970-957a-26b2ef701aa2)
+
+```
+sudo apt install -y software-properties-common
+```
+![image](https://github.com/user-attachments/assets/935d8ef6-41c2-4df4-a397-57a8a6d503ba)
+
+```
+sudo add-apt-repository ppa:ondrej/php
+```
+![image](https://github.com/user-attachments/assets/601f5255-48ba-45fe-9a23-b21cbc7daff7)
+
+```
+sudo apt-get update
+```
+![image](https://github.com/user-attachments/assets/c64580dc-eba9-4e61-9ffd-0d70a1528862)
 
 
 
