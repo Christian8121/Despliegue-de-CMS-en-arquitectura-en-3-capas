@@ -158,9 +158,23 @@ sudo apt-get update
 ```
 ![image](https://github.com/user-attachments/assets/c64580dc-eba9-4e61-9ffd-0d70a1528862)
 
+```
+sudo apt install php7.4
+```
+![image](https://github.com/user-attachments/assets/bf77dbfe-8045-4faf-8b7c-ccc6502ecb9d)
 
+```
+sudo apt install php7.4-gd php7.4-intl
+```
+![image](https://github.com/user-attachments/assets/37b68bef-26f1-44ee-995a-86af32667914)
 
+```
+sudo apt install php7.4-cli php7.4-common php7.4-curl php7.4-zip php7.4-gd php7.4-mysql php7.4-xml php7.4-mbstring php7.4-json php7.4-intl libapache2-mod-php7.4
+```
+![image](https://github.com/user-attachments/assets/9cee2a35-0b1e-457e-8565-83a4b5288d38)
 
-
-
+```
+sudo update-alternatives --set php /usr/bin/php7.4
+```
+![image](https://github.com/user-attachments/assets/e8e35489-725b-4119-80d7-3b8849e81afc)
 
