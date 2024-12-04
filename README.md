@@ -100,12 +100,27 @@ sudo cp 000-default.conf Balanceo.conf
 ```
 sudo a2enmod proxy proxy_http
 ```
-* Editamos el fichero de Balanceo:
+* Editamos el fichero de Balanceo
 ```
 sudo nano Balanceo.conf
 ```
 ![image](https://github.com/user-attachments/assets/6d2040e3-3aa8-40f6-9017-9b09cc3826ce)
 
+* Habilitamos el nuevo archivo .conf y reiniciamos apache y comprobamos que esta funcionando de manera correcta
+
+```
+sudo a2ensite Balanceo.conf
+```
+```
+sudo systemctl restart apache2
+```
+```
+sudo systemctl reload apache2
+```
+```
+sudo systemctl status apache2
+```
+![image](https://github.com/user-attachments/assets/b9f6c024-4d60-45b6-bf62-708a6efc2390)
 
 
 
