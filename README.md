@@ -92,6 +92,20 @@ sudo systemctl status apache2
 * Comprobamos si funciona el Apache2
 ![image](https://github.com/user-attachments/assets/63d35076-98dc-48f9-b760-463f9e12c4e3)
 
+* Configuramos el fichero de Balanceo
+
+```
+sudo cp 000-default.conf Balanceo.conf
+```
+```
+sudo a2enmod proxy proxy_http
+```
+* Editamos el fichero de Balanceo:
+```
+sudo nano Balanceo.conf
+```
+![image](https://github.com/user-attachments/assets/6d2040e3-3aa8-40f6-9017-9b09cc3826ce)
+
 
 
 
