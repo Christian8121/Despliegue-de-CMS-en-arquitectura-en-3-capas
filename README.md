@@ -178,3 +178,11 @@ sudo update-alternatives --set php /usr/bin/php7.4
 ```
 ![image](https://github.com/user-attachments/assets/e8e35489-725b-4119-80d7-3b8849e81afc)
 
+## 4. Configuración de NFS
+El servidor NFS centralizará los archivos del CMS WordPress, compartiéndolos con los servidores backend para garantizar coherencia, escalabilidad y un acceso eficiente y seguro a los recursos.
+
+* Aprovisionamiento de NFS
+```
+
+```
+
