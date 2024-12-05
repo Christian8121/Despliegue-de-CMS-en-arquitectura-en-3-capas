@@ -204,4 +204,6 @@ chown -R www-data:www-data /var/nfs/shared/*
 # Reiniciar el servidor NFS
 systemctl restart nfs-kernel-server
 ```
+![image](https://github.com/user-attachments/assets/233b8e90-671c-4907-a8fd-a8fec0b8335a)
+
 
