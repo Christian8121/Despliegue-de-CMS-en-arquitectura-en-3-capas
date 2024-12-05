@@ -32,6 +32,8 @@ Se crearán instancias con una AMI de Ubuntu Server 24.04 para un despliegue en 
 Asignar un nombre a la instancia y seleccionar la AMI Ubuntu Server 24.04 LTS. En entornos de prueba, se pueden usar ISOs o imágenes equivalentes.
 
 ![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
+* Las instancias creadas
+![image](https://github.com/user-attachments/assets/4d5d0aae-4a88-473a-8ff2-d2c0688b4013)
 
 ### Paso 2: Definir el tipo de Instancia y crear las Claves de SSH
 
