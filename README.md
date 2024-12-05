@@ -219,4 +219,6 @@ GRANT ALL PRIVILEGES ON db_wordpress.* TO 'severino'@'%';
 FLUSH PRIVILEGES;
 EOF
 ```
+![image](https://github.com/user-attachments/assets/fc0446a9-baf6-4bf8-ad45-486347cf2037)
+
 
