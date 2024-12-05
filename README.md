@@ -108,7 +108,8 @@ sudo a2enmod proxy proxy_http
 ```
 sudo nano Balanceo.conf
 ```
-![image](https://github.com/user-attachments/assets/6d2040e3-3aa8-40f6-9017-9b09cc3826ce)
+
+![image](https://github.com/user-attachments/assets/d1fd907b-4064-42fe-9e3c-68e7f0c2d615)
 
 * Habilitamos el nuevo archivo .conf y reiniciamos apache y comprobamos que esta funcionando de manera correcta
 
@@ -129,37 +130,46 @@ sudo systemctl status apache2
 ### Paso 2: Configuración de los servidores WEBs
 
 - Los servidores con Apache y PHP despliegan WordPress utilizando recursos alojados en una carpeta compartida en el servidor NFS, recibiendo solicitudes gestionadas por el balanceador de carga.
-* Aprovisionamiento para los dos servidores 
+* Aprovisionamiento para los dos servidores que nos permitira configurar todo lo necesario para el perfecto funcionamiento 
+
+
+### Actualizar e instalar Apache y PHP con módulos necesarios
 ```
-
-# Actualizar e instalar Apache y PHP con módulos necesarios                 apt update -y
+apt update -y
 apt install -y apache2 nfs-common php libapache2-mod-php php-mysql php-curl>
-
-# Habilitar el módulo rewrite
+```
+### Habilitar el módulo rewrite
+```
 a2enmod rewrite
-
-# Configurar el sitio web para que use la carpeta compartida de NFS
+```
+### Configurar el sitio web para que use la carpeta compartida de NFS
+```
 sed -i 's|DocumentRoot .*|DocumentRoot /nfs/shared/wordpress|' /etc/apache2>
-
-# Configurar permisos del directorio
+```
+### Configurar permisos del directorio
+```
 sed -i '/<\/VirtualHost>/i \
 <Directory /nfs/shared/wordpress>\
         Options Indexes FollowSymLinks\
         AllowOverride All\
         Require all granted\
 </Directory>' /etc/apache2/sites-available/000-default.conf
-
-# Crear configuración personalizada
+```
+### Crear configuración personalizada
+```
 cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-availab>
-
-# Montar la carpeta compartida desde el servidor NFS
+```
+### Montar la carpeta compartida desde el servidor NFS
+```
 mkdir -p /nfs/shared
 mount 172.40.131.73:/var/nfs/shared /nfs/shared
-
-# Configurar montaje automático en /etc/fstab
+```
+### Configurar montaje automático en /etc/fstab
+```
 echo "172.40.131.73:/var/nfs/shared /nfs/shared nfs auto,nofail,noatime,nol>mount -a
-
+```
 # Desactivar el sitio por defecto y activar el nuevo sitio
+
 a2dissite 000-default.conf
 a2ensite websv.conf
 
