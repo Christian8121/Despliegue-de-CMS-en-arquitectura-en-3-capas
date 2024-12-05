@@ -132,42 +132,42 @@ sudo systemctl status apache2
 - Los servidores con Apache y PHP despliegan WordPress utilizando recursos alojados en una carpeta compartida en el servidor NFS, recibiendo solicitudes gestionadas por el balanceador de carga.
 * Aprovisionamiento para los dos servidores que nos permitira configurar todo lo necesario para el perfecto funcionamiento 
 
-
-### Actualizar e instalar Apache y PHP con módulos necesarios
 ```
+# Actualizar e instalar Apache y PHP con módulos necesarios
+
 apt update -y
 apt install -y apache2 nfs-common php libapache2-mod-php php-mysql php-curl>
-```
-### Habilitar el módulo rewrite
-```
+
+# Habilitar el módulo rewrite
+
 a2enmod rewrite
-```
-### Configurar el sitio web para que use la carpeta compartida de NFS
-```
+
+# Configurar el sitio web para que use la carpeta compartida de NFS
+
 sed -i 's|DocumentRoot .*|DocumentRoot /nfs/shared/wordpress|' /etc/apache2>
-```
-### Configurar permisos del directorio
-```
+
+# Configurar permisos del directorio
+
 sed -i '/<\/VirtualHost>/i \
 <Directory /nfs/shared/wordpress>\
         Options Indexes FollowSymLinks\
         AllowOverride All\
         Require all granted\
 </Directory>' /etc/apache2/sites-available/000-default.conf
-```
-### Crear configuración personalizada
-```
+
+# Crear configuración personalizada
+
 cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-availab>
-```
-### Montar la carpeta compartida desde el servidor NFS
-```
+
+# Montar la carpeta compartida desde el servidor NFS
+
 mkdir -p /nfs/shared
 mount 172.40.131.73:/var/nfs/shared /nfs/shared
-```
-### Configurar montaje automático en /etc/fstab
-```
+
+# Configurar montaje automático en /etc/fstab
+
 echo "172.40.131.73:/var/nfs/shared /nfs/shared nfs auto,nofail,noatime,nol>mount -a
-```
+
 # Desactivar el sitio por defecto y activar el nuevo sitio
 
 a2dissite 000-default.conf
@@ -234,5 +234,30 @@ FLUSH PRIVILEGES;
 EOF
 ```
 ![image](https://github.com/user-attachments/assets/fc0446a9-baf6-4bf8-ad45-486347cf2037)
+
+## 4. Funcionamiento del CMS WordPress 
+Ya terminando con toda la tarea, con nuestra dirección pública, tendremos que ingresarla en un navegador para poder instalar nuestro WordPress de la siguiente manera:
+
+![image](https://github.com/user-attachments/assets/11f735cf-7b4a-47a3-81ae-ede141772f57)
+
+### Paso 1: 
+
+* En este apartado selecionaremos el idioma: 
+![Captura de pantalla 2024-12-05 135920](https://github.com/user-attachments/assets/b5bc1ffd-f5c7-44c3-aa4c-b81f62b81a4d)
+
+![Captura de pantalla 2024-12-05 140020](https://github.com/user-attachments/assets/7c2b12fe-6a74-423b-a396-f0800873dfc3)
+
+* Aquí introducimos los datos de nuestra base de datos creada para establecer la conexión:
+
+![Captura de pantalla 2024-12-05 140321](https://github.com/user-attachments/assets/5f67b801-cb35-4183-be9c-d32d923cc2f9)
+![Captura de pantalla 2024-12-05 140353](https://github.com/user-attachments/assets/d63bd472-4c67-4ed4-9e63-17e37badbafd)
+
+* Introducimos la información necesaria y asi para terminar con nuestra instalacion
+![Captura de pantalla 2024-12-05 140908](https://github.com/user-attachments/assets/6824b5ed-f384-4565-8441-4626fb78075c)
+![Captura de pantalla 2024-12-05 140946](https://github.com/user-attachments/assets/dc258571-fb29-4df2-9036-2719fcdedcaa)
+![Captura de pantalla 2024-12-05 141137](https://github.com/user-attachments/assets/bac93870-3899-427b-a20a-c2dc4c906cc2)
+
+
+
 
 
