@@ -123,6 +123,7 @@ sudo systemctl status apache2
 ![image](https://github.com/user-attachments/assets/b9f6c024-4d60-45b6-bf62-708a6efc2390)
 
 ### Paso 2: Configuración de los servidores WEBs
+* Aprovisionamiento de los dos servidores
 Los servidores con Apache y PHP despliegan WordPress utilizando recursos alojados en una carpeta compartida en el servidor NFS, recibiendo solicitudes gestionadas por el balanceador de carga.
 
 * actualizar la lista de repositorios y llevarlos a su versión más reciente.
@@ -206,5 +207,6 @@ chown -R www-data:www-data /var/nfs/shared/*
 systemctl restart nfs-kernel-server
 ```
 ![image](https://github.com/user-attachments/assets/233b8e90-671c-4907-a8fd-a8fec0b8335a)
+
 
 
