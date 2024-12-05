@@ -125,7 +125,7 @@ sudo systemctl status apache2
 ### Paso 2: Configuración de los servidores WEBs
 
 - Los servidores con Apache y PHP despliegan WordPress utilizando recursos alojados en una carpeta compartida en el servidor NFS, recibiendo solicitudes gestionadas por el balanceador de carga.
-* Aprovisionamiento de los dos servidores 
+* Aprovisionamiento para los dos servidores 
 ```
 
 # Actualizar e instalar Apache y PHP con módulos necesarios                 apt update -y
@@ -162,6 +162,10 @@ a2ensite websv.conf
 # Reiniciar Apache
 systemctl restart apache2
 ```
+![image](https://github.com/user-attachments/assets/32b22374-ccd2-4ff7-aaf6-8ad291a7b7d6)
+
+![image](https://github.com/user-attachments/assets/b326921d-5a95-41fc-846b-63512b23cb59)
+
 ## 4. Configuración de NFS
 El servidor NFS centralizará los archivos del CMS WordPress, compartiéndolos con los servidores backend para garantizar coherencia, escalabilidad y un acceso eficiente y seguro a los recursos.
 
@@ -191,5 +195,28 @@ systemctl restart nfs-kernel-server
 ```
 ![image](https://github.com/user-attachments/assets/233b8e90-671c-4907-a8fd-a8fec0b8335a)
 
+## 4. Configuración del servidor DDBB
+En el servidor de base de datos configuraremos MariaDB para gestionar la información del CMS WordPress. Crearemos una base de datos específica, un usuario con permisos adecuados, y habilitaremos conexiones remotas desde los servidores backend, asegurando un entorno seguro y optimizado para el manejo de datos.
 
+* Aprovicionamiento del servidor DDBB
+- En el aprovisionamiento del servidor de base de datos, instalaremos y configuraremos MariaDB, crearemos una base de datos para WordPress, asignaremos un usuario con los permisos necesarios y habilitaremos conexiones remotas desde los servidores backend, garantizando la comunicación segura y eficiente en la arquitectura desplegada.
+```
+#!/bin/bash
+# Actualizar e instalar MySQL y PhpMyAdmin
+apt update -y
+apt install -y mysql-server phpmyadmin
+
+# Configurar MySQL para permitir conexiones remotas desde las nuevas IPs
+sed -i "s/^bind-address.*/bind-address = 172.40.139.44/" /etc/mysql/mysql.c>
+# Reiniciar MySQL
+systemctl restart mysql
+
+# Crear base de datos y usuario con acceso desde los servidores
+mysql <<EOF
+CREATE DATABASE db_wordpress;
+CREATE USER 'severino'@'%' IDENTIFIED BY '5826';
+GRANT ALL PRIVILEGES ON db_wordpress.* TO 'severino'@'%';
+FLUSH PRIVILEGES;
+EOF
+```
 
