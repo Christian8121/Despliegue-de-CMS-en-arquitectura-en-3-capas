@@ -268,7 +268,8 @@ Desde la pagina de [noip](https://www.noip.com/es-MX) podemos crear un dominio n
 
 Por último instalaremos Certbot para obtener y configurar un certificado SSL/TLS gratuito de Let's Encrypt en nuestro servidor. Esto nos permitirá habilitar HTTPS en nuestro sitio web, asegurando las conexiones y protegiendo la privacidad de los usuarios.
 
-![Captura de pantalla 2024-12-05 142622](https://github.com/user-attachments/assets/ad3bb693-1707-474c-8eb6-4eb1fd6d7405)
+
+![Captura de pantalla 2024-12-05 142622](https://github.com/user-attachments/assets/98cfb68c-863d-424f-ab30-c3d587c46f8d)
 
 
 
