@@ -259,6 +259,7 @@ Ya terminando con toda la tarea, con nuestra dirección pública, tendremos que 
 ![Captura de pantalla 2024-12-05 140946](https://github.com/user-attachments/assets/dc258571-fb29-4df2-9036-2719fcdedcaa)
 ![Captura de pantalla 2024-12-05 141137](https://github.com/user-attachments/assets/bac93870-3899-427b-a20a-c2dc4c906cc2)
 
+
 ### Paso 2: Creación de dominio con nuestra IP publica
 
 Desde la pagina de [noip](https://www.noip.com/es-MX) podemos crear un dominio nuestro
@@ -268,8 +269,11 @@ Desde la pagina de [noip](https://www.noip.com/es-MX) podemos crear un dominio n
 
 Por último instalaremos Certbot para obtener y configurar un certificado SSL/TLS gratuito de Let's Encrypt en nuestro servidor. Esto nos permitirá habilitar HTTPS en nuestro sitio web, asegurando las conexiones y protegiendo la privacidad de los usuarios.
 
-
 ![Captura de pantalla 2024-12-05 142622](https://github.com/user-attachments/assets/98cfb68c-863d-424f-ab30-c3d587c46f8d)
+
+* Mi WordPress modificado
+
+![image](https://github.com/user-attachments/assets/e3fa0ca9-9a0e-4908-81b6-b39132d9fd76)
 
 
 
