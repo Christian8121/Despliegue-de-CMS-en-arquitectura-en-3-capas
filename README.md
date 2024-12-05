@@ -123,62 +123,45 @@ sudo systemctl status apache2
 ![image](https://github.com/user-attachments/assets/b9f6c024-4d60-45b6-bf62-708a6efc2390)
 
 ### Paso 2: Configuración de los servidores WEBs
-* Aprovisionamiento de los dos servidores 
+
 - Los servidores con Apache y PHP despliegan WordPress utilizando recursos alojados en una carpeta compartida en el servidor NFS, recibiendo solicitudes gestionadas por el balanceador de carga.
+* Aprovisionamiento de los dos servidores 
+```
 
-* actualizar la lista de repositorios y llevarlos a su versión más reciente.
+# Actualizar e instalar Apache y PHP con módulos necesarios                 apt update -y
+apt install -y apache2 nfs-common php libapache2-mod-php php-mysql php-curl>
 
-```
-sudo apt-get update
-```
-![image](https://github.com/user-attachments/assets/bea9e838-a9a6-4c77-a67c-50e3a2973a91)
+# Habilitar el módulo rewrite
+a2enmod rewrite
 
-```
-sudo apt-get upgrade -y
-```
-![image](https://github.com/user-attachments/assets/c1886106-9949-41ba-b320-88db65976ca2)
+# Configurar el sitio web para que use la carpeta compartida de NFS
+sed -i 's|DocumentRoot .*|DocumentRoot /nfs/shared/wordpress|' /etc/apache2>
 
-* Instalación de Apache y PHP (+ Librerías)
-```
-sudo apt-get install apache2 -y
-```
-![image](https://github.com/user-attachments/assets/dbe70fe5-831b-4970-957a-26b2ef701aa2)
+# Configurar permisos del directorio
+sed -i '/<\/VirtualHost>/i \
+<Directory /nfs/shared/wordpress>\
+        Options Indexes FollowSymLinks\
+        AllowOverride All\
+        Require all granted\
+</Directory>' /etc/apache2/sites-available/000-default.conf
 
-```
-sudo apt install -y software-properties-common
-```
-![image](https://github.com/user-attachments/assets/935d8ef6-41c2-4df4-a397-57a8a6d503ba)
+# Crear configuración personalizada
+cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-availab>
 
-```
-sudo add-apt-repository ppa:ondrej/php
-```
-![image](https://github.com/user-attachments/assets/601f5255-48ba-45fe-9a23-b21cbc7daff7)
+# Montar la carpeta compartida desde el servidor NFS
+mkdir -p /nfs/shared
+mount 172.40.131.73:/var/nfs/shared /nfs/shared
 
-```
-sudo apt-get update
-```
-![image](https://github.com/user-attachments/assets/c64580dc-eba9-4e61-9ffd-0d70a1528862)
+# Configurar montaje automático en /etc/fstab
+echo "172.40.131.73:/var/nfs/shared /nfs/shared nfs auto,nofail,noatime,nol>mount -a
 
-```
-sudo apt install php7.4
-```
-![image](https://github.com/user-attachments/assets/bf77dbfe-8045-4faf-8b7c-ccc6502ecb9d)
+# Desactivar el sitio por defecto y activar el nuevo sitio
+a2dissite 000-default.conf
+a2ensite websv.conf
 
+# Reiniciar Apache
+systemctl restart apache2
 ```
-sudo apt install php7.4-gd php7.4-intl
-```
-![image](https://github.com/user-attachments/assets/37b68bef-26f1-44ee-995a-86af32667914)
-
-```
-sudo apt install php7.4-cli php7.4-common php7.4-curl php7.4-zip php7.4-gd php7.4-mysql php7.4-xml php7.4-mbstring php7.4-json php7.4-intl libapache2-mod-php7.4
-```
-![image](https://github.com/user-attachments/assets/9cee2a35-0b1e-457e-8565-83a4b5288d38)
-
-```
-sudo update-alternatives --set php /usr/bin/php7.4
-```
-![image](https://github.com/user-attachments/assets/e8e35489-725b-4119-80d7-3b8849e81afc)
-
 ## 4. Configuración de NFS
 El servidor NFS centralizará los archivos del CMS WordPress, compartiéndolos con los servidores backend para garantizar coherencia, escalabilidad y un acceso eficiente y seguro a los recursos.
 
