@@ -21,12 +21,12 @@ Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra par
 ![image](https://github.com/user-attachments/assets/046f851d-1da4-4c15-97de-bbb22cbad298)
 
 ![image](https://github.com/user-attachments/assets/a4398091-b22e-45a5-903b-1ffcbef76611)
-Despues de terminar con la configuracion de VPC le damos ha crear VPC
+Despues de terminar con la configuración de VPC le damos ha crear VPC
 
 ### Paso 2: Comprobamos que se ha creado la vpc y las subredes de esta de forma correcta
 ![image](https://github.com/user-attachments/assets/520611e7-cceb-4779-8e80-38b77bd937e3)
 
-## 2. Creacion de las instancias 
+## 2. Creación de las instancias 
 Se crearán instancias con una AMI de Ubuntu Server 24.04 para un despliegue en tres capas: un balanceador en la primera capa, servidores backend en la segunda y un servidor MySQL en la tercera.
 
 ### Paso 1: Configuración de las instancias
@@ -264,7 +264,7 @@ Ya terminando con toda la tarea, con nuestra dirección pública, tendremos que 
 Desde la pagina de [noip](https://www.noip.com/es-MX) podemos crear un dominio nuestro
 ![Captura de pantalla 2024-12-05 141822](https://github.com/user-attachments/assets/a8c722a2-d5e4-4c17-916d-233ba2ef65c9)
 
-### Paso 3: La instalacion de certbot
+### Paso 3: La instalación de certbot
 
 Por último instalaremos Certbot para obtener y configurar un certificado SSL/TLS gratuito de Let's Encrypt en nuestro servidor. Esto nos permitirá habilitar HTTPS en nuestro sitio web, asegurando las conexiones y protegiendo la privacidad de los usuarios.
 
