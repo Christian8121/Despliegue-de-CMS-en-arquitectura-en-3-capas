@@ -242,7 +242,8 @@ Ya terminando con toda la tarea, con nuestra dirección pública, tendremos que 
 
 ### Paso 1: 
 
-* En este apartado selecionaremos el idioma: 
+* En este apartado selecionaremos el idioma:
+  
 ![Captura de pantalla 2024-12-05 135920](https://github.com/user-attachments/assets/b5bc1ffd-f5c7-44c3-aa4c-b81f62b81a4d)
 
 ![Captura de pantalla 2024-12-05 140020](https://github.com/user-attachments/assets/7c2b12fe-6a74-423b-a396-f0800873dfc3)
@@ -253,10 +254,21 @@ Ya terminando con toda la tarea, con nuestra dirección pública, tendremos que 
 ![Captura de pantalla 2024-12-05 140353](https://github.com/user-attachments/assets/d63bd472-4c67-4ed4-9e63-17e37badbafd)
 
 * Introducimos la información necesaria y asi para terminar con nuestra instalacion
+
 ![Captura de pantalla 2024-12-05 140908](https://github.com/user-attachments/assets/6824b5ed-f384-4565-8441-4626fb78075c)
 ![Captura de pantalla 2024-12-05 140946](https://github.com/user-attachments/assets/dc258571-fb29-4df2-9036-2719fcdedcaa)
 ![Captura de pantalla 2024-12-05 141137](https://github.com/user-attachments/assets/bac93870-3899-427b-a20a-c2dc4c906cc2)
 
+### Paso 2: Creación de dominio con nuestra IP publica
+
+Desde la pagina de [noip](https://www.noip.com/es-MX) podemos crear un dominio nuestro
+![Captura de pantalla 2024-12-05 141822](https://github.com/user-attachments/assets/a8c722a2-d5e4-4c17-916d-233ba2ef65c9)
+
+### Paso 3: La instalacion de certbot
+
+Por último instalaremos Certbot para obtener y configurar un certificado SSL/TLS gratuito de Let's Encrypt en nuestro servidor. Esto nos permitirá habilitar HTTPS en nuestro sitio web, asegurando las conexiones y protegiendo la privacidad de los usuarios.
+
+![Captura de pantalla 2024-12-05 142622](https://github.com/user-attachments/assets/ad3bb693-1707-474c-8eb6-4eb1fd6d7405)
 
 
 
