@@ -24,16 +24,14 @@ Dos subredes privadas, una para los servidores Backend y NFS (Capa 2) y otra par
 
 ### Paso 2: Comprobamos que se ha creado la vpc y las subredes de esta de forma correcta
 ![image](https://github.com/user-attachments/assets/520611e7-cceb-4779-8e80-38b77bd937e3)
-
+Despues de terminar con la configuracion de VPC le damos ha crear VPC
 ## 2. Creacion de las instancias 
 Se crearán instancias con una AMI de Ubuntu Server 24.04 para un despliegue en tres capas: un balanceador en la primera capa, servidores backend en la segunda y un servidor MySQL en la tercera.
 
-### Paso 1: Configuración de la instancia
+### Paso 1: Configuración de las instancias
 Asignar un nombre a la instancia y seleccionar la AMI Ubuntu Server 24.04 LTS. En entornos de prueba, se pueden usar ISOs o imágenes equivalentes.
 
 ![image](https://github.com/user-attachments/assets/973d4bea-a08b-47c9-8a41-674d7fd2d82d)
-* Las instancias creadas
-![image](https://github.com/user-attachments/assets/4d5d0aae-4a88-473a-8ff2-d2c0688b4013)
 
 ### Paso 2: Definir el tipo de Instancia y crear las Claves de SSH
 
@@ -50,6 +48,9 @@ Se asignará a la instancia creada una red VPC previamente configurada. Al ser u
 ![image](https://github.com/user-attachments/assets/7394e885-7a66-4fd4-88a4-0cd7b3b629d2)
 ![image](https://github.com/user-attachments/assets/4af3c169-aab2-4201-818b-49208d85c752)
 ![image](https://github.com/user-attachments/assets/d0d48d1d-d86a-4e7a-bc57-2b88224d4710)
+
+* Las instancias creadas
+![image](https://github.com/user-attachments/assets/4d5d0aae-4a88-473a-8ff2-d2c0688b4013)
 
 ## 3. Configuración Servidores Web y Balanceador
 Se configurarán los servidores web y el balanceador de carga. En el balanceador, se instalará Apache2 y, mediante una directiva proxy en un archivo .conf, se gestionará la distribución de carga entre los dos servidores web.
