@@ -273,6 +273,11 @@ Por último instalaremos Certbot para obtener y configurar un certificado SSL/TL
 
 * Mi WordPress modificado
 
+![Captura de pantalla 2024-12-05 195048](https://github.com/user-attachments/assets/94667908-b1f9-4873-bd90-21c4fd2583b6)
+
+
+![Captura de pantalla 2024-12-05 195115](https://github.com/user-attachments/assets/ac3dd0e9-31f7-49a2-9e73-3128ca5c916c)
+
 ![image](https://github.com/user-attachments/assets/e3fa0ca9-9a0e-4908-81b6-b39132d9fd76)
 
 
